@@ -47,10 +47,4 @@ public class BrowserHelper {
 
     }
 
-    public void nuttelozeMethode(){
-        System.out.println("deze methode kan zo weg gehaald worden");
-    }
-    public void nuttelozeMethode2(){
-        System.out.println("deze methode kan zo weg gehaald worden");
-    }
 }
