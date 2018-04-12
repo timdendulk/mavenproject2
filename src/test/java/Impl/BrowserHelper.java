@@ -16,7 +16,14 @@ public class BrowserHelper {
 
 
     BrowserHelper(){
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");//"c:/cucumberproject/chromedriver.exe");
+
+        String os = System.getProperty("os.name");
+        if("Mac OS X".equals(os)) {
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        } else {
+            System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");//"c:/cucumberproject/chromedriver.exe");
+
+        }
         webDriver = new ChromeDriver();
         wait = new WebDriverWait(webDriver,10);
         waitlong = new WebDriverWait(webDriver,20);
