@@ -5,10 +5,7 @@ import cucumber.api.java.en.When;
 import cucumber.api.PendingException;
 import static org.junit.Assert.assertEquals;
 import Impl.Implementatie;
-import Testutil.BestandHelper;
-import Testutil.Wacht;
 import java.io.File;
-import java.util.List;
 import Impl.Implementatie;
 import Impl.BrowserHelper;
 
