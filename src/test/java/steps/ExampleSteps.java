@@ -14,22 +14,22 @@ public class ExampleSteps {
     //Implementatie implementatie;
     Implementatie implementatie = new Implementatie();
 
-    @Given("^I am on the website$")
-    public void iAmOnTheWebsite()  {
+    @Given("^I am on the homepage and click on cars$")
+    public void iAmOnTheHomepageAndClickOnCars() {
         //implementatie = new Implementatie();
         implementatie.gaNaarCukeWorkshopPagina();
     }
 
-    @When("^i click on the cars button$")
-    public void iClickOnTheCarsButton() {
+    @When("^i choose all the required details$")
+    public void iChooseAllTheRequiredDetails() {
         implementatie.clickonbutton("a[href*=\"#CARTRAWLER\"]");
     }
 
-    @Then("^I should arrive at the cars input screen and be able to input details$")
-    public void iShouldArriveAtTheCarsInputScreenAndBeAbleToInputDetails() {
+    @Then("^I should be able to view details and search result$")
+    public void iShouldBeAbleToViewDetailsAndSearchResult() {
         implementatie.checkiftrue("#s2id_autogen6");
         implementatie.clickonbutton("#s2id_autogen6 > a > span.select2-chosen");
-        implementatie.typetext("#select2-drop > div > input");
-        implementatie.clickindropdown("//*[@id=\"select2-drop\"]/ul/li[2]/div/text()");
+        implementatie.typetext("#select2-drop > div > input","Amsterdam");
+        implementatie.clickindropdown("//*[@id=\"select2-drop\"]/ul/li[2]/div");
     }
 }

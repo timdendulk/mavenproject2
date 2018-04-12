@@ -5,9 +5,9 @@ Feature: book car
 
   Scenario: search for a car booking
 
-    Given I am on the website
+    Given I am on the homepage and click on cars
 
-    When i click on the cars button
+    When i choose all the required details
 
-    Then I should arrive at the cars input screen and be able to input details and search
+    Then I should be able to view details and search result
 

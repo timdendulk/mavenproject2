@@ -36,8 +36,8 @@ public class BrowserHelper {
     public void assertion(String s){
         Assert.assertTrue("cars input field not loaded",webDriver.findElement(By.cssSelector(s))!=null);
     }
-    public void typetekst(String s){
-        webDriver.findElement(By.cssSelector(s)).sendKeys("Amsterdam");
+    public void typetekst(String s, String input){
+        webDriver.findElement(By.cssSelector(s)).sendKeys();
     }
     public void klikindropdown(String s){
         //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(s)));

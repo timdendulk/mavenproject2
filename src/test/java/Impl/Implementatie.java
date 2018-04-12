@@ -17,8 +17,8 @@ BrowserHelper driver = new BrowserHelper();
     public void checkiftrue(String s) {
         driver.assertion(s);
     }
-    public void typetext(String s) {
-        driver.typetekst(s);
+    public void typetext(String s, String input) {
+        driver.typetekst(s,input);
     }
     public void clickindropdown(String s){
         driver.klikindropdown(s);
