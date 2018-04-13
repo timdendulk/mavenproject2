@@ -18,18 +18,20 @@ public class ExampleSteps {
     public void iAmOnTheHomepageAndClickOnCars() {
         //implementatie = new Implementatie();
         implementatie.gaNaarCukeWorkshopPagina();
+        implementatie.clickonbutton("//*[@id=\"body-section\"]/div[1]/div/div/div[1]/div/ul/li[4]/a");
     }
 
     @When("^i choose all the required details$")
     public void iChooseAllTheRequiredDetails() {
-        implementatie.clickonbutton("a[href*=\"#CARTRAWLER\"]");
+        implementatie.checkiftrue("#s2id_autogen6");
+        implementatie.clickonbutton("//*[@id=\"s2id_autogen6\"]/a");
+        implementatie.typetext("//*[@id=\"select2-drop\"]/div/input","Amsterdam");
+        //onderstaande werkt niet, kan specifieke 'Amsterdam downtown' element niet vinden
+        implementatie.clickindropdown("\"//*[@id=\\\"select2-drop\\\"]/ul/li[2]/div/span\"");
     }
 
     @Then("^I should be able to view details and search result$")
     public void iShouldBeAbleToViewDetailsAndSearchResult() {
-        implementatie.checkiftrue("#s2id_autogen6");
-        implementatie.clickonbutton("#s2id_autogen6 > a > span.select2-chosen");
-        implementatie.typetext("#select2-drop > div > input","Amsterdam");
-        implementatie.clickindropdown("//*[@id=\"select2-drop\"]/ul/li[2]/div");
+
     }
 }

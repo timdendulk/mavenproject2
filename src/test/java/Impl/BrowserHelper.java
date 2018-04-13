@@ -37,21 +37,25 @@ public class BrowserHelper {
     public void klikelement(String s) {
 //        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
 //        webDriver.findElement(By.cssSelector(s)).click();
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
-        webDriver.findElement(By.cssSelector(s)).click();
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(s)));
+        webDriver.findElement(By.xpath(s)).click();
     }
     public void assertion(String s){
         Assert.assertTrue("cars input field not loaded",webDriver.findElement(By.cssSelector(s))!=null);
     }
     public void typetekst(String s, String input){
-        webDriver.findElement(By.cssSelector(s)).sendKeys();
+        webDriver.findElement(By.xpath(s)).sendKeys(input);
     }
     public void klikindropdown(String s){
         //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(s)));
         //webDriver.findElement(By.xpath(s)).click();
-        WebElement element2 = webDriver.findElement(By.xpath(s));
-        System.out.println(element2.getText());
-
+//        WebElement departurePlace;
+//        departurePlace = webDriver.findElement(By.xpath(s));
+//        String text = departurePlace.getText();
+//        System.out.println(text);
+        //controleer of het goede elemement is geselecteerd
+        String tekst = webDriver.findElement(By.xpath(s)).getAttribute("textContent");
+        System.out.println(tekst);
     }
 
 }
