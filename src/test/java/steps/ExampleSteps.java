@@ -5,19 +5,16 @@ import cucumber.api.java.en.When;
 import cucumber.api.PendingException;
 import static org.junit.Assert.assertEquals;
 import Impl.Implementatie;
-import java.io.File;
-import Impl.Implementatie;
-import Impl.BrowserHelper;
 
 public class ExampleSteps {
 
-    //Implementatie implementatie aa;
-    Implementatie implementatie = new Implementatie();
+    //Implementatie implementatie;
+    private Implementatie implementatie = new Implementatie();
 
     @Given("^I am on the homepage and click on cars$")
     public void iAmOnTheHomepageAndClickOnCars() {
         //implementatie = new Implementatie();
-        implementatie.gaNaarCukeWorkshopPagina();
+        implementatie.gaNaarDeWebsite();
     }
 
     @When("^i choose all the required details$")
