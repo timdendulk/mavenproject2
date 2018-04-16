@@ -18,7 +18,7 @@ public class BrowserHelper {
     BrowserHelper(){
 
         String os = System.getProperty("os.name");
-        if("Mac OS X".equals(os)) {
+        if("Mac OS X".equals(os)|"Linux".equals(os)) {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         } else {
             System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");//"c:/cucumberproject/chromedriver.exe");
