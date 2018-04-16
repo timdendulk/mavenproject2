@@ -1,5 +1,5 @@
 Feature: Booking a flight
-
+@Tim
   Scenario Outline: i want to search for a flight and see the results
     Given I am on the homepage
     And i click on the flights page

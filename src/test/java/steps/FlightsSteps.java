@@ -22,11 +22,6 @@ public class FlightsSteps {
         //even wachten tot de website weer online is om de CSS selector te vinden
     }
 
-    @When("^i enter a <city>, a <destination> and a <date>$")
-    public void iEnterACityADestinationAndADate() {
-
-    }
-
     @And("^i click on search$")
     public void iClickOnSearch() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -35,6 +30,12 @@ public class FlightsSteps {
 
     @Then("^i see the results for that <city>, <destination> and <date>$")
     public void iSeeTheResultsForThatCityDestinationAndDate() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @When("^i enter a <city>, a <destination> and a <date>$")
+    public void iEnterACityADestinationAndADate() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
