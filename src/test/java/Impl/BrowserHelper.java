@@ -54,4 +54,7 @@ public class BrowserHelper {
 
     }
 
+    public void nuttelozeMethode(){
+        System.out.println("deze methode mag zo weer weggegooid worden.");
+    }
 }

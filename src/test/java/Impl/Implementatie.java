@@ -4,7 +4,7 @@ public class Implementatie {
 
 BrowserHelper driver = new BrowserHelper();
 
-    public void gaNaarCukeWorkshopPagina() {
+    public void gaNaarDeWebsite() {
         //String testwebsite = "file://"+ BestandHelper.getRootPath() + File.separator + "src/main/cuke_workshop/leningaanvraag.html";
         driver.gaNaarUrl("https://www.phptravels.net/");
     }
@@ -23,5 +23,7 @@ BrowserHelper driver = new BrowserHelper();
     public void clickindropdown(String s){
         driver.klikindropdown(s);
     }
+
+
 
 }
