@@ -7,7 +7,7 @@ import cucumber.api.CucumberOptions;
         features="src/test/Resources/Features",
         glue ={"classpath:steps"}
 //        ,
-//        tags = {"@Joris","@Tim"},
+//        tags = {"@Joris"},
 //        format = {
 //                "pretty",
 //                "html:target/cucumber-reports/cucumber-pretty",
